@@ -13,11 +13,10 @@ function getComputerChoice() {
         return "scissors"
     }
 }
-
 console.log(getComputerChoice())
 
 //Write the logic to get the human choice
-
+//
 
 //Declare the players score variables
 
