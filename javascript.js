@@ -1,5 +1,3 @@
-//There are two players in the game: (1)human and (2)computer
-
 //Write the logic to get the computer choice
 //create a function to get three random numbers
 function getComputerChoice() {
@@ -31,8 +29,7 @@ function getHumanChoice() {
 }
 
 
-//Declare the players score variables
-//create two global variables for score
+//Declare the players score variables, create two global variables for score
 let humanScore = 0;
 let computerScore = 0;
 
@@ -61,21 +58,30 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
         console.log("You lose! Rock beats scissors!");
     } else {
-        console.log("Draw!");
+        console.log("Tie!");
     }
 
 }
 
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-//call the function
-playRound(humanSelection, computerSelection);
-console.log(humanScore); 
-console.log(computerScore);
-
-
 //Write the logic to play the entire game
+function playGame() {
+    humanScore = 0;
+    computerScore = 0;
+    
+    //play the games 5 times
+    for (let i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+
+    humanScore > computerScore ?
+        //human wins
+        console.log(`Congratulations, you are the victor with ${humanScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`) :
+        //computer wins
+        console.log(`Unfortunately, you have lost to computer. computer wins with ${computerScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`);
+}
+
+//test and call the function playGame()
+playGame();
 
 
