@@ -3,13 +3,22 @@
 function getComputerChoice() {
     let ComputerChoice = Math.floor(Math.random() * 3);
     //assign different numbers to the values of “rock”, “paper” or “scissors” respectively
-    if(ComputerChoice === 0) {
+    /*if(ComputerChoice === 0) {
         return "rock";
     } else if (ComputerChoice === 1) {
         return "paper";
     } else if (ComputerChoice === 2) {
         return "scissors"
     }
+    */
+   switch (ComputerChoice) {
+    case 0:
+        return "rock";
+    case 1:
+        return "paper";
+    case 2:
+        return "scissors";
+   }
 }
 
 //Write the logic to get the human choice
@@ -29,7 +38,7 @@ function getHumanChoice() {
 }
 
 
-//Declare the players score variables, create two global variables for score
+//Declare the players score variables, two global variables
 let humanScore = 0;
 let computerScore = 0;
 
