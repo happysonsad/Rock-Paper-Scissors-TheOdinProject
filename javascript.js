@@ -3,14 +3,7 @@
 function getComputerChoice() {
     let ComputerChoice = Math.floor(Math.random() * 3);
     //assign different numbers to the values of “rock”, “paper” or “scissors” respectively
-    /*if(ComputerChoice === 0) {
-        return "rock";
-    } else if (ComputerChoice === 1) {
-        return "paper";
-    } else if (ComputerChoice === 2) {
-        return "scissors"
-    }
-    */
+
    switch (ComputerChoice) {
     case 0:
         return "rock";
