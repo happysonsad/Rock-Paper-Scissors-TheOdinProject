@@ -34,6 +34,8 @@ function getHumanChoice() {
 console.log(getHumanChoice());
 
 //Declare the players score variables
+const humanScore = 0;
+const computerScore = 0;
 
 
 //Write the logic to play a single round
