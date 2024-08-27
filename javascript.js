@@ -77,18 +77,10 @@ function checkWinner() {
     if (humanScore === 5 || computerScore ===5) {
         const winner = humanScore === 5 ? "Human" : "Computer";
         alert(`${winner} won!`);
-        resetGame();
+        //resetGame();
     };
 }
 
-function resetGame() {
-    humanScore = 0;
-    computerScore = 0;
-    document.querySelector('#humanScore').textContent = `Human Score: ${humanScore}`;
-    document.querySelector('#computerScore').textContent = `Computer Score: ${computerScore}`;
-    document.querySelector("#result").textContent = "Game over! Let's play again!";
-    alert("Game over! Let's play again!");
-}
 
 
 const rockButton = document.querySelector("#rock");
