@@ -1,6 +1,5 @@
 function getComputerChoice() {
     let ComputerChoice = Math.floor(Math.random() * 3);
-    //assign different numbers to the values of “rock”, “paper” or “scissors” respectively
 
    switch (ComputerChoice) {
     case 0:
@@ -68,7 +67,6 @@ function playRound(humanChoice, computerChoice) {
     document.querySelector('#humanScore').textContent = `Human Score: ${humanScore}`;
     document.querySelector('#computerScore').textContent = `Computer Score: ${computerScore}`;
 
-    // end which someone reaches 5 pts
     checkWinner();
 
 }
@@ -107,5 +105,3 @@ scissorsButton.addEventListener("click", () => {
     playRound("scissors", getComputerChoice());
 });
 
-
-// git push origin rps-ui
