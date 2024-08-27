@@ -1,5 +1,3 @@
-//Write the logic to get the computer choice
-//create a function to get three random numbers
 function getComputerChoice() {
     let ComputerChoice = Math.floor(Math.random() * 3);
     //assign different numbers to the values of “rock”, “paper” or “scissors” respectively
@@ -14,8 +12,6 @@ function getComputerChoice() {
    }
 }
 
-//Write the logic to get the human choice
-//use the "prompt" to get user's input
 function getHumanChoice() {
     let HumanChoice = prompt("Choose now! Rock, paper or scissors?","Rock");
     if (HumanChoice.toLowerCase() === "rock") {
@@ -30,13 +26,9 @@ function getHumanChoice() {
 
 }
 
-
-//Declare the players score variables, two global variables
 let humanScore = 0;
 let computerScore = 0;
 
-
-//Write the logic to play a single round
     // rock - rock, rock - paper, rock - scissors
     // paper - paper, paper - rock, paper - scissors
     // scissors - scissors, scissors - paper, scissors - rock
@@ -66,24 +58,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-//Write the logic to play the entire game
 function playGame() {
     humanScore = 0;
     computerScore = 0;
     
-    //play the games 5 times
     for (let i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
     }
 
     humanScore > computerScore ?
-        //human wins
         console.log(`Congratulations, you are the victor with ${humanScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`) :
-        //computer wins
         console.log(`Unfortunately, you have lost to computer. computer wins with ${computerScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`);
 }
 
-//test and call the function playGame()
 playGame();
 
 
