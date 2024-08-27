@@ -57,7 +57,23 @@ function playRound(humanChoice, computerChoice) {
 
 }
 
+const computerSelection = getComputerChoice();
+
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+
+rockButton.addEventListener("click", () => {
+    playRound("rock", computerSelection);
+});
+
+paperButton.addEventListener("click", () => {
+    playRound("paper", computerSelection);
+});
+
+scissorsButton.addEventListener("click", () => {
+    playRound("scissors", computerSelection);
+});
+
 
 // git push origin rps-ui
-
-
