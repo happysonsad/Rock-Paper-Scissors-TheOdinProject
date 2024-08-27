@@ -58,19 +58,6 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
-    
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-
-    humanScore > computerScore ?
-        console.log(`Congratulations, you are the victor with ${humanScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`) :
-        console.log(`Unfortunately, you have lost to computer. computer wins with ${computerScore} out of 5 rounds won and ${5 - humanScore - computerScore} tie(s).`);
-}
-
-playGame();
+// git push origin rps-ui
 
 
